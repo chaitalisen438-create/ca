@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Hind Siliguri', 'Plus Jakarta Sans', sans-serif;
+    background-color: #FBF8F2;
+    color: #2C1810;
+  }
+
+  h1, h2, h3, .font-bengali-serif {
+    font-family: 'Noto Serif Bengali', 'Cinzel', serif;
+  }
+
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+/* Custom Temple & Traditional Bengali motifs styling */
+.bg-temple-pattern {
+  background-color: #4a0808;
+  background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px), radial-gradient(#d4af37 0.75px, #390505 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.bg-ivory-pattern {
+  background-color: #FBF8F2;
+  background-image: radial-gradient(#e5d7ba 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #FFF0B8 0%, #D4AF37 50%, #AA7C11 100%);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FFE89E 0%, #E6C158 50%, #C99726 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.maroon-gradient {
+  background: linear-gradient(145deg, #570808 0%, #3B0404 60%, #240202 100%);
+}
+
+.border-gold-antique {
+  border-color: #C5A059;
+}
+
+.shadow-temple {
+  box-shadow: 0 10px 30px -5px rgba(60, 8, 8, 0.18), 0 4px 10px -2px rgba(197, 160, 89, 0.12);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1ebd9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aa7c11;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6d071a;
+}
+
