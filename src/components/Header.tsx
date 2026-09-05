@@ -27,7 +27,8 @@ export const Header: React.FC = () => {
     setSelectedFestival,
     setIsCartOpen,
     setIsSearchOpen,
-    setIsAccountOpen
+    setIsAccountOpen,
+    userProfile
   } = useStore();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -67,7 +68,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-4 text-[11px] text-[#E8D4A2]">
             <div className="flex items-center gap-1.5">
               <Phone className="w-3 h-3 text-[#D4AF37]" />
-              <a href="tel:+919830000000" className="hover:text-white transition-colors">+91 98300 XXXXX</a>
+              <a href="tel:+918981701480" className="hover:text-white transition-colors font-medium">+91 89817 01480</a>
             </div>
             <span className="text-[#C5A059]/40">|</span>
             
@@ -224,13 +225,15 @@ export const Header: React.FC = () => {
             <button
               id="header-account-btn"
               onClick={() => setIsAccountOpen(true)}
-              className="hidden sm:flex items-center gap-1.5 p-2 rounded-full hover:bg-[#5E1212] text-[#EAD098] hover:text-[#FFF] transition-all cursor-pointer"
-              title={language === 'bn' ? 'আমার অ্যাকাউন্ট' : 'My Account'}
+              className="hidden sm:flex items-center gap-2 px-2.5 py-1.5 rounded-full bg-[#520B0B]/70 border border-[#800000] hover:bg-[#5E1212] text-[#EAD098] hover:text-[#FFF] transition-all cursor-pointer shadow-inner"
+              title={`${userProfile.name} (${userProfile.email})`}
               aria-label="My Account"
             >
-              <User className="w-5 h-5" />
-              <span className="hidden xl:inline text-xs font-medium text-[#E4CB94]">
-                {language === 'bn' ? 'অ্যাকাউন্ট' : 'Account'}
+              <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#800000] to-[#360404] border border-[#D4AF37] flex items-center justify-center text-xs font-bold text-[#FFD700]">
+                {userProfile.name.charAt(0) || 'চ'}
+              </div>
+              <span className="hidden md:inline text-xs font-medium text-[#FFEAA7] max-w-[110px] truncate">
+                {userProfile.name.split(' ')[0] || (language === 'bn' ? 'অ্যাকাউন্ট' : 'Account')}
               </span>
             </button>
 
@@ -366,11 +369,11 @@ export const Header: React.FC = () => {
                 <span>{language === 'bn' ? 'লগইন / রেজিস্টার' : 'Account Login'}</span>
               </button>
               <a
-                href="tel:+919830000000"
+                href="tel:+918981701480"
                 className="flex items-center gap-1 text-[#E0C070]"
               >
                 <Phone className="w-3.5 h-3.5" />
-                <span>+91 98300 XXXXX</span>
+                <span>+91 89817 01480</span>
               </a>
             </div>
           </div>

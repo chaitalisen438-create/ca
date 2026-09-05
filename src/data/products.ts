@@ -10,6 +10,12 @@ import satyanarayanPujaKitImage from '../assets/images/satyanarayan_puja_kit_178
 import bhimseniCamphorImage from '../assets/images/bhimseni_pure_camphor_1788537241029.jpg';
 import pureDesiGheeImage from '../assets/images/pure_desi_cow_ghee_1788537732793.jpg';
 import copperKoshaKushiImage from '../assets/images/copper_kosha_kushi_1788539192813.jpg';
+import miniBajotChowkiImage from '../assets/images/mini_bajot_chowki_1788593093273.jpg';
+import dhakaiShankhaImage from '../assets/images/dhakai_puja_shankha_1788593113150.jpg';
+import brassMangalGhatImage from '../assets/images/brass_mangal_ghat_set_1788593384348.jpg';
+import brassLakshmiGaneshImage from '../assets/images/brass_lakshmi_ganesh_idols_1788593606242.jpg';
+import tulsiJapaMalaImage from '../assets/images/sacred_vrindavan_tulsi_mala_1788593733682.jpg';
+import dashakarmaWeddingPackImage from '../assets/images/dashakarma_wedding_pack_1788593907333.jpg';
 
 export const PRODUCTS: Product[] = [
   {
@@ -282,7 +288,7 @@ export const PRODUCTS: Product[] = [
     isFeatured: false,
     isBestSeller: true,
     festival: 'durga-puja',
-    imageUrl: 'https://images.unsplash.com/photo-1508615039623-a25605d2b022?q=80&w=1000&auto=format&fit=crop',
+    imageUrl: dhakaiShankhaImage,
     shortDescBn: 'গম্ভীর ও সুমধুর ধ্বনিযুক্ত খাঁটি সামুদ্রিক শঙ্খ, ওঙ্কার চিহ্নে অলঙ্কৃত।',
     shortDescEn: 'Natural resonant ocean conch shell embossed with sacred Om emblem.',
     longDescBn: 'পূজা প্রারম্ভে ও আরতির সময়ে শাঁখ বাজানো অমঙ্গল নাশ করে। এই শাঁখটি মসৃণ ও সহজে সুর তোলার উপযোগী। সাথে পাচ্ছেন পিতলের সুদৃশ্য শাঁখ স্ট্যান্ড।',
@@ -303,12 +309,13 @@ export const PRODUCTS: Product[] = [
     stockCount: 20,
     isFeatured: true,
     isBestSeller: false,
-    festival: 'lakshmi-puja',
-    imageUrl: 'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?q=80&w=1000&auto=format&fit=crop',
-    shortDescBn: 'মঙ্গল ঘট স্থাপনের জন্য স্থায়ী পিতল ও তামায় তৈরি অনুপম মঙ্গলময় সেট।',
-    shortDescEn: 'Auspicious Kalash setup crafted in pure brass with copper mango leaves.',
-    longDescBn: 'প্রতিটি শুভ অনুষ্ঠানের প্রধান স্তম্ভ হলো মঙ্গলঘট। এই সেটে রয়েছে স্বস্তিক চিহ্নিত পিতলের ঘট, তামার ৫টি আম্রপল্লব এবং প্রতীকী পিতলের শ্রীফল বা নারিকেল।',
-    itemsIncludedBn: ['১টি স্বস্তিক খোদাই পিতলের ঘট', '১টি তামার ৫ পাতার পল্লব', '১টি পিতলের নারিকেল']
+    festival: 'all',
+    imageUrl: brassMangalGhatImage,
+    shortDescBn: 'স্বস্তিক চিহ্নিত খাঁটি পিতলের পূর্ণ ঘট, ৫ পাতার তামার আম্রপল্লব ও রক্তসূত্র শোভিত শ্রীফল (নারিকেল)।',
+    shortDescEn: 'Auspicious sacred brass Kalash with pure copper 5-leaf Amrapallav and sacred coconut set.',
+    longDescBn: 'প্রতিটি শুভ কাজ, গৃহপ্রবেশ, লক্ষ্মী পূজা, দুর্গাপূজা ও নিত্য আরাধনার প্রধান ভিত্তি হলো মঙ্গলঘট। এই সেটে রয়েছে নিখুঁত স্বস্তিক খোদাই করা ভারী পিতলের ঘট, তামার তৈরি দীর্ঘস্থায়ী ৫ পাতার পল্লব এবং পবিত্র লাল সুতা জড়ানো শ্রীফল।',
+    itemsIncludedBn: ['১টি স্বস্তিক খোদাই খাঁটি পিতলের পূর্ণ ঘট', '১টি খাঁটি তামার ৫ পাতার আম্রপল্লব', '১টি পবিত্র লাল সুতা জড়ানো শ্রীফল (নারিকেল)'],
+    guidelinesBn: 'পিতল ও তামার বিশুদ্ধতা বজায় রাখতে লেবু বা পিতলের পলিশ দিয়ে যত্ন নিন।'
   },
   {
     id: 'lakshmi-ganesh-brass-murti',
@@ -325,12 +332,13 @@ export const PRODUCTS: Product[] = [
     stockCount: 9,
     isFeatured: true,
     isBestSeller: true,
-    festival: 'lakshmi-puja',
-    imageUrl: 'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?q=80&w=1000&auto=format&fit=crop',
-    shortDescBn: 'গৃহের সুখ, শান্তি ও ধন-সম্পদ বৃদ্ধির জন্য বরদাহস্ত লক্ষ্মী ও সিদ্ধিদাতা গণেশ।',
-    shortDescEn: 'Auspicious solid brass handcrafted deities of Lakshmi & Ganesha for home altar.',
-    longDescBn: 'অসাধারণ মুখশ্রী ও সূক্ষ্ম অলঙ্কার খোদাই। নিত্য পূজায় পঞ্চামৃত স্নাপন করলেও এর উজ্জ্বলতা মলিন হয় না। গৃহপ্রবেশ ও দীপাবলিতে শ্রেষ্ঠ উপহার।',
-    itemsIncludedBn: ['১ জোড়া লক্ষ্মী-গণেশ মূর্তি (উচ্চতা ৬ ইঞ্চি)', 'ভেলভেট উপহার বাক্স', 'পবিত্র লাল শালু কাপড়']
+    festival: 'all',
+    imageUrl: brassLakshmiGaneshImage,
+    shortDescBn: 'মন্দির ও গৃহপ্রবেশের জন্য অষ্টধাতু পলিশের উজ্জ্বল খাঁটি পিতলের হস্তনির্মিত লক্ষ্মী ও গণেশ যুগল মূর্তি।',
+    shortDescEn: 'Handcrafted solid brass deities of Lakshmi & Ganesha with radiant Ashtadhatu polish.',
+    longDescBn: 'শ্রীশ্রী মা লক্ষ্মী ও সিদ্ধিদাতা গণেশ ঠাকুরের সৌম্য ও অপরূপ শান্ত মুখশ্রী। অষ্টধাতু পলিশের কারণে নিত্য পূজা ও স্নানের পরেও দীর্ঘকাল উজ্জ্বল ও অবিকৃত থাকে। পদ্মপাদপীঠের ওপর প্রতিষ্ঠিত, সূক্ষ্ম অলঙ্কার খোদাই ও নিখুঁত কারুকার্য। গৃহের সমৃদ্ধি ও শুভ শক্তির উন্মেষে আদর্শ।',
+    itemsIncludedBn: ['১ জোড়া পিতলের অষ্টধাতু পলিশ লক্ষ্মী-গণেশ যুগল মূর্তি (উচ্চতা ৬ ইঞ্চি)', '১টি প্রিমিয়াম ভেলভেট উপহার বাক্স', 'পবিত্র লাল শালু বস্ত্র ও চন্দন প্রলেপ কিট'],
+    guidelinesBn: 'নরম শুকনো সুতির কাপড় দিয়ে মুছুন। প্রয়োজনে হালকা পিতলের পলিশ ব্যবহার করতে পারেন।'
   },
   {
     id: 'pure-deshi-cow-ghee-puja',
@@ -368,13 +376,14 @@ export const PRODUCTS: Product[] = [
     inStock: true,
     stockCount: 8,
     isFeatured: true,
-    isBestSeller: false,
+    isBestSeller: true,
     festival: 'all',
-    imageUrl: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?q=80&w=1000&auto=format&fit=crop',
-    shortDescBn: 'শাস্ত্রজ্ঞ পণ্ডিতদের প্রস্তুতকৃত তালিকা অনুযায়ী ৪১ প্রকার খাঁটি উপাচার।',
-    shortDescEn: '41 authentic Vedic ritual articles compiled as per classical Bengali guidelines.',
-    longDescBn: 'হোমের কাঠ, কুশ, তিল, যব, হরিৎকী, সুপারি, পৈতে, লাল সুতো, চেলির জোড়, খই, ধুতি ও শাড়ি বরণ সামগ্রী এক বক্সে সম্পূর্ণ সুরক্ষিত।',
-    itemsIncludedBn: ['৪১ প্রকার বিশুদ্ধ দশকর্মা সামগ্রী', 'পুরোহিত নির্দেশিকা পুস্তিকা']
+    imageUrl: dashakarmaWeddingPackImage,
+    shortDescBn: 'শাস্ত্রজ্ঞ কুলপুরোহিতদের ফর্দ অনুযায়ী প্রস্তুত ৪১ প্রকার বিশুদ্ধ উপাচার, যজ্ঞকাষ্ঠ, কুশ ও বরণ সামগ্রী।',
+    shortDescEn: 'Complete 41 sacred Vedic ritual items for Bengali Upanayana & Wedding ceremonies.',
+    longDescBn: 'বাঙালি সনাতন হিন্দু শুভ বিবাহ ও উপনয়ন (পৈতে) সংস্কারের জন্য অভিজ্ঞ পুরোহিতদের নির্দেশিত সম্পূর্ণ নির্ভুল দশকর্মা ফর্দ প্যাক। যজ্ঞকাষ্ঠ (আম ও অশ্বত্থ সমিধা), পবিত্র পৈতে (যজ্ঞোপবীত), কুশ, শ্বেত তিল, যব, গোটা সুপারি, হরিৎকী, রক্তচন্দন, সিঁদুর, মধুপর্ক বাটি, খই, লাল সুতা ও বরণ ডালা সামগ্রী নিখুঁতভাবে সাজানো। প্রতিটি সামগ্রী পরিচ্ছন্ন বায়ুরোধী প্যাকেটে সুরক্ষিত।',
+    itemsIncludedBn: ['৪১ প্রকার শাস্ত্রীয় দশকর্মা সামগ্রী', 'আসল যজ্ঞোপবীত (পৈতে) ও কুশাঙ্গুরীয়', 'যজ্ঞ সমিধা কাঠ ও যব-তিল প্যাক', 'বিবাহ ও উপনয়ন পুরোহিত নির্দেশিকা পুস্তিকা'],
+    guidelinesBn: 'অনুষ্ঠানের আগের দিন শুকনো ও পবিত্র স্থানে সংরক্ষণ করুন।'
   },
   {
     id: 'tulsi-japa-mala',
@@ -389,13 +398,37 @@ export const PRODUCTS: Product[] = [
     reviewCount: 167,
     inStock: true,
     stockCount: 50,
-    isFeatured: false,
+    isFeatured: true,
     isBestSeller: true,
     festival: 'all',
-    imageUrl: 'https://images.unsplash.com/photo-1599818496377-f44222046648?q=80&w=1000&auto=format&fit=crop',
-    shortDescBn: 'শ্রীকৃষ্ণের চরণে সমর্পিত সুগন্ধি আসল তুলসী কাঠ দিয়ে নিখুঁতভাবে তৈরি।',
-    shortDescEn: 'Original holy Tulsi wood rosary blessed from Sri Vrindavan Dham.',
-    longDescBn: 'হরেকৃষ্ণ মহামন্ত্র জপ ও ধারণে পরম পুণ্যদায়ক। প্রতিটি দানা মসৃণ এবং গাঁথুনি মজবুত সুতায় বাঁধা। সঙ্গে পাচ্ছেন সুতির জপ থলে (গোমুখী)।',
-    itemsIncludedBn: ['১০৮+১ দানা তুলসী মালা', '১টি পদ্মফুল প্রিন্ট সুতির জপ ঝুলি']
+    imageUrl: tulsiJapaMalaImage,
+    shortDescBn: 'শ্রী বৃন্দাবন ধামের পবিত্র তুলসী কাঠে তৈরি ১০৮+১ দানার খাঁটি জপমালা ও তুলো-সুতির গোমুখী ঝুলি।',
+    shortDescEn: 'Authentic 108+1 beads sacred Tulsi wood japa mala blessed from Sri Vrindavan Dham with Gomukhi bag.',
+    longDescBn: 'শ্রীকৃষ্ণের চরণে সমর্পিত ও বৃন্দাবন থেকে সংগৃহীত খাঁটি সুগন্ধযুক্ত তুলসী কাঠ দিয়ে নিখুঁত হস্তশিল্পে তৈরি। প্রতিটি দানা মসৃণ ও সুষম গোলকাকৃতি হওয়ায় জপ করার সময় আঙুলে বাধাহীনভাবে আবর্তিত হয়। হরেকৃষ্ণ মহামন্ত্র ও যেকোনো ইষ্টমন্ত্র জপে পরম পুণ্যপ্রদায়ক। সাথে পাচ্ছেন আকর্ষণীয় পদ্মফুল ও মহামন্ত্র খচিত সুতির জপ থলে (গোমুখী)।',
+    itemsIncludedBn: ['১০৮+১ দানা আসল বৃন্দাবনী তুলসী কাঠের জপমালা', '১টি প্রিমিয়াম সুতির হরিনাম গোমুখী ঝুলি', 'পবিত্র গঙ্গাজল স্প্রে ও সুরক্ষামূলক জিপলক পাউচ'],
+    guidelinesBn: 'জপের সময় মালা মাটিতে স্পর্শ করাবেন না। গোমুখী থলের মধ্যে রেখে নিষ্ঠার সহিত জপ করুন।'
+  },
+  {
+    id: 'meenakari-mini-bajot-chowki',
+    nameBn: '৬x৬ ইঞ্চি মীনাকারী কারুকার্য অলঙ্কৃত পূজার মিনি বাজট / কাঠের চৌকি',
+    nameEn: 'Handcrafted 6x6 Inch Mini Bajot Pooja Chowki',
+    categoryId: 'puja-upakaran',
+    categoryNameBn: 'পুজোর উপকরণ',
+    price: 650,
+    originalPrice: 950,
+    discountPercent: 32,
+    rating: 5.0,
+    reviewCount: 128,
+    inStock: true,
+    stockCount: 25,
+    isFeatured: true,
+    isBestSeller: true,
+    festival: 'all',
+    imageUrl: miniBajotChowkiImage,
+    shortDescBn: 'মন্দির ও বেদির জন্য দৃষ্টিনন্দন ৬x৬ ইঞ্চি মীনাকারী কাজ করা ও মজবুত পিতলের পায়াযুক্ত মিনি বাজট চৌকি।',
+    shortDescEn: 'Exquisite 6x6 inch handcrafted Meenakari mini Bajot chowki with sturdy brass legs for pooja mandir.',
+    longDescBn: 'মন্দিরে দেবমূর্তি, শালগ্রাম শিলা, লাড্ডু গোপাল, মঙ্গলঘট বা পঞ্চপ্রদীপ রাখার জন্য পরম পবিত্র ও ঐতিহ্যমণ্ডিত মীনাকারী বাজট। পিতলের সুদৃঢ় পায়া, দৃষ্টিনন্দন নকশা ও দীর্ঘস্থায়ী ধাতব ফিনিশ। নিত্যদিনের পূজা, দেওয়ালি, ভাইফোঁটা এবং শুভ অনুষ্ঠানে উপহার দেওয়ার জন্যও আদর্শ।',
+    itemsIncludedBn: ['১টি ৬x৬ ইঞ্চি প্রিমিয়াম মীনাকারী বাজট চৌকি', '১টি আকর্ষণীয় গিফট বক্স প্যাকেজিং'],
+    guidelinesBn: 'নরম সুতির শুকনো কাপড় দিয়ে পরিষ্কার করুন। দীর্ঘকাল উজ্জ্বল ও চকচকে থাকবে।'
   }
 ];

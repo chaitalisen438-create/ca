@@ -54,6 +54,7 @@ export interface Order {
   total: number;
   couponCode?: string;
   customerName: string;
+  email?: string;
   phone: string;
   address: string;
   city: string;
@@ -65,6 +66,12 @@ export interface Order {
     date: string;
     completed: boolean;
   }[];
+}
+
+export interface UserProfile {
+  name: string;
+  email: string;
+  phone: string;
 }
 
 export interface FestivalItem {

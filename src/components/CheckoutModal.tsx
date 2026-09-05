@@ -27,11 +27,13 @@ export const CheckoutModal: React.FC = () => {
     placeOrder,
     setActiveTrackingOrder,
     setIsTrackOrderOpen,
-    language
+    language,
+    userProfile
   } = useStore();
 
-  const [customerName, setCustomerName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [customerName, setCustomerName] = useState(userProfile.name || 'চৈতালী সেন (Chaitali Sen)');
+  const [email, setEmail] = useState(userProfile.email || 'chaitalisen438@gmail.com');
+  const [phone, setPhone] = useState(userProfile.phone || '8981701480');
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('কলকাতা (Kolkata)');
   const [pincode, setPincode] = useState('700001');
@@ -66,6 +68,7 @@ export const CheckoutModal: React.FC = () => {
     setTimeout(() => {
       const order = placeOrder({
         customerName,
+        email,
         phone,
         address: `${address} (নিকটবর্তী: ${landmark || 'উল্লেখ নেই'})`,
         city,
@@ -214,7 +217,7 @@ export const CheckoutModal: React.FC = () => {
                     <input
                       type="text"
                       required
-                      placeholder="যেমন: অরিন্দম ব্যানার্জী"
+                      placeholder="যেমন: চৈতালী সেন"
                       value={customerName}
                       onChange={(e) => setCustomerName(e.target.value)}
                       className="w-full px-3 py-2 rounded-xl bg-white border border-[#DDCFBA] focus:outline-none focus:border-[#800000]"
@@ -224,30 +227,43 @@ export const CheckoutModal: React.FC = () => {
                   <div className="grid grid-cols-2 gap-3">
                     <div>
                       <label className="block font-semibold text-[#4A382C] mb-1">
+                        ইমেইল (Email Address)
+                      </label>
+                      <input
+                        type="email"
+                        placeholder="chaitalisen438@gmail.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="w-full px-3 py-2 rounded-xl bg-white border border-[#DDCFBA] focus:outline-none focus:border-[#800000] font-mono text-[11px]"
+                      />
+                    </div>
+                    <div>
+                      <label className="block font-semibold text-[#4A382C] mb-1">
                         মোবাইল নম্বর (Phone) *
                       </label>
                       <input
                         type="tel"
                         required
-                        placeholder="যেমন: 9830XXXXXX"
+                        placeholder="যেমন: 8981701480"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         className="w-full px-3 py-2 rounded-xl bg-white border border-[#DDCFBA] focus:outline-none focus:border-[#800000]"
                       />
                     </div>
-                    <div>
-                      <label className="block font-semibold text-[#4A382C] mb-1">
-                        পিন কোড (PIN Code) *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="যেমন: 700001"
-                        value={pincode}
-                        onChange={(e) => setPincode(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl bg-white border border-[#DDCFBA] focus:outline-none focus:border-[#800000]"
-                      />
-                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block font-semibold text-[#4A382C] mb-1">
+                      পিন কোড (PIN Code) *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="যেমন: 700001"
+                      value={pincode}
+                      onChange={(e) => setPincode(e.target.value)}
+                      className="w-full px-3 py-2 rounded-xl bg-white border border-[#DDCFBA] focus:outline-none focus:border-[#800000]"
+                    />
                   </div>
 
                   <div>

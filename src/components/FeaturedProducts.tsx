@@ -31,11 +31,23 @@ export const FeaturedProducts: React.FC = () => {
   const bhimseniProduct = PRODUCTS.find(p => p.id === 'bhimseni-pure-camphor') || PRODUCTS[8];
   const cowGheeProduct = PRODUCTS.find(p => p.id === 'pure-deshi-cow-ghee-puja') || PRODUCTS[9];
   const copperKoshaProduct = PRODUCTS.find(p => p.id === 'copper-kosha-kushi-pure') || PRODUCTS[10];
+  const brassKalashProduct = PRODUCTS.find(p => p.id === 'brass-kalash-mango-leaves') || PRODUCTS[11];
+  const lakshmiGaneshProduct = PRODUCTS.find(p => p.id === 'lakshmi-ganesh-brass-murti') || PRODUCTS[12];
+  const tulsiMalaProduct = PRODUCTS.find(p => p.id === 'tulsi-japa-mala') || PRODUCTS[0];
+  const dashakarmaProduct = PRODUCTS.find(p => p.id === 'dashakarma-upanayana-bibaha-fardo') || PRODUCTS[1];
 
   const currentSpotlight = 
-    spotlightId === 'copper-kosha-kushi-pure'
-      ? copperKoshaProduct
-      : spotlightId === 'pure-deshi-cow-ghee-puja'
+    spotlightId === 'dashakarma-upanayana-bibaha-fardo'
+      ? dashakarmaProduct
+      : spotlightId === 'tulsi-japa-mala'
+        ? tulsiMalaProduct
+        : spotlightId === 'lakshmi-ganesh-brass-murti'
+        ? lakshmiGaneshProduct
+        : spotlightId === 'brass-kalash-mango-leaves'
+        ? brassKalashProduct
+        : spotlightId === 'copper-kosha-kushi-pure'
+        ? copperKoshaProduct
+        : spotlightId === 'pure-deshi-cow-ghee-puja'
         ? cowGheeProduct
         : spotlightId === 'bhimseni-pure-camphor'
           ? bhimseniProduct
@@ -101,6 +113,54 @@ export const FeaturedProducts: React.FC = () => {
         
         {/* Spotlight Selector Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-4">
+          <button
+            onClick={() => setSpotlightId('dashakarma-upanayana-bibaha-fardo')}
+            className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 transition-all cursor-pointer shadow-md ${
+              spotlightId === 'dashakarma-upanayana-bibaha-fardo'
+                ? 'bg-gradient-to-r from-[#D4AF37] via-[#F3CE63] to-[#B8860B] text-[#240303] border-2 border-[#FFE89E] scale-105'
+                : 'bg-[#3B0707] text-[#FFEAA7] border border-[#C5A059]/50 hover:bg-[#590B0B]'
+            }`}
+          >
+            <Package className="w-4 h-4 text-[#FFD700]" />
+            <span>{language === 'bn' ? 'উপনয়ন ও বিবাহ দশকর্মা ফর্দ' : 'Wedding Dashakarma Pack'}</span>
+          </button>
+
+          <button
+            onClick={() => setSpotlightId('tulsi-japa-mala')}
+            className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 transition-all cursor-pointer shadow-md ${
+              spotlightId === 'tulsi-japa-mala'
+                ? 'bg-gradient-to-r from-[#D4AF37] via-[#F3CE63] to-[#B8860B] text-[#240303] border-2 border-[#FFE89E] scale-105'
+                : 'bg-[#3B0707] text-[#FFEAA7] border border-[#C5A059]/50 hover:bg-[#590B0B]'
+            }`}
+          >
+            <Sparkles className="w-4 h-4 text-[#FFD700]" />
+            <span>{language === 'bn' ? 'বৃন্দাবনের খাঁটি তুলসী মালা' : 'Sacred Tulsi Mala'}</span>
+          </button>
+
+          <button
+            onClick={() => setSpotlightId('lakshmi-ganesh-brass-murti')}
+            className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 transition-all cursor-pointer shadow-md ${
+              spotlightId === 'lakshmi-ganesh-brass-murti'
+                ? 'bg-gradient-to-r from-[#D4AF37] via-[#F3CE63] to-[#B8860B] text-[#240303] border-2 border-[#FFE89E] scale-105'
+                : 'bg-[#3B0707] text-[#FFEAA7] border border-[#C5A059]/50 hover:bg-[#590B0B]'
+            }`}
+          >
+            <Sparkles className="w-4 h-4 text-[#FFD700]" />
+            <span>{language === 'bn' ? 'অষ্টধাতু পলিশ লক্ষ্মী-গণেশ' : 'Lakshmi-Ganesh Idols'}</span>
+          </button>
+
+          <button
+            onClick={() => setSpotlightId('brass-kalash-mango-leaves')}
+            className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 transition-all cursor-pointer shadow-md ${
+              spotlightId === 'brass-kalash-mango-leaves'
+                ? 'bg-gradient-to-r from-[#D4AF37] via-[#F3CE63] to-[#B8860B] text-[#240303] border-2 border-[#FFE89E] scale-105'
+                : 'bg-[#3B0707] text-[#FFEAA7] border border-[#C5A059]/50 hover:bg-[#590B0B]'
+            }`}
+          >
+            <Sparkles className="w-4 h-4 text-[#FFD700]" />
+            <span>{language === 'bn' ? 'পিতলের পূর্ণ ঘট ও আম্রপল্লব' : 'Brass Purna Kalash'}</span>
+          </button>
+
           <button
             onClick={() => setSpotlightId('copper-kosha-kushi-pure')}
             className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 transition-all cursor-pointer shadow-md ${

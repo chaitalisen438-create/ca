@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { Product, CartItem, Order, Language } from '../types';
+import { Product, CartItem, Order, Language, UserProfile } from '../types';
 import { PRODUCTS } from '../data/products';
 
 interface StoreContextType {
@@ -10,6 +10,8 @@ interface StoreContextType {
   cartSubtotal: number;
   wishlist: string[];
   wishlistCount: number;
+  userProfile: UserProfile;
+  updateUserProfile: (profile: Partial<UserProfile>) => void;
   activeView: 'home' | 'shop' | 'about' | 'contact' | 'product-detail';
   setActiveView: (view: 'home' | 'shop' | 'about' | 'contact' | 'product-detail') => void;
   selectedCategory: string | null;
@@ -39,6 +41,7 @@ interface StoreContextType {
   removeCoupon: () => void;
   toastMessage: string | null;
   showToast: (msg: string) => void;
+  setToastMessage: (msg: string | null) => void;
   orders: Order[];
   addToCart: (product: Product, quantity?: number) => void;
   buyNow: (product: Product, quantity?: number) => void;
@@ -49,6 +52,7 @@ interface StoreContextType {
   isInWishlist: (productId: string) => boolean;
   placeOrder: (orderInfo: {
     customerName: string;
+    email?: string;
     phone: string;
     address: string;
     city: string;
@@ -116,8 +120,9 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         deliveryFee: 0,
         total: 2051,
         couponCode: 'MAHAAKAL10',
-        customerName: 'অরিন্দম সেন',
-        phone: '9830123456',
+        customerName: 'চৈতালী সেন (Chaitali Sen)',
+        email: 'chaitalisen438@gmail.com',
+        phone: '8981701480',
         address: '১২/বি কালীঘাট রোড, কলকাতা',
         city: 'কলকাতা',
         pincode: '700026',
@@ -134,6 +139,34 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       return [];
     }
   });
+
+  // User Profile
+  const [userProfile, setUserProfile] = useState<UserProfile>(() => {
+    try {
+      const saved = localStorage.getItem('mdb_user_profile');
+      if (saved) return JSON.parse(saved);
+    } catch {
+      // ignore
+    }
+    return {
+      name: 'চৈতালী সেন (Chaitali Sen)',
+      email: 'chaitalisen438@gmail.com',
+      phone: '8981701480'
+    };
+  });
+
+  const updateUserProfile = (profile: Partial<UserProfile>) => {
+    setUserProfile(prev => {
+      const next = { ...prev, ...profile };
+      try {
+        localStorage.setItem('mdb_user_profile', JSON.stringify(next));
+      } catch {
+        // ignore
+      }
+      return next;
+    });
+    showToast('গ্রাহক প্রোফাইল সফলভাবে সংরক্ষিত হয়েছে!');
+  };
 
   useEffect(() => {
     localStorage.setItem('mdb_cart', JSON.stringify(cart));
@@ -237,6 +270,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const placeOrder = (orderInfo: {
     customerName: string;
+    email?: string;
     phone: string;
     address: string;
     city: string;
@@ -269,6 +303,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       total,
       couponCode: appliedCoupon?.code,
       customerName: orderInfo.customerName,
+      email: orderInfo.email || userProfile.email,
       phone: orderInfo.phone,
       address: orderInfo.address,
       city: orderInfo.city,
@@ -306,6 +341,8 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         cartSubtotal,
         wishlist,
         wishlistCount,
+        userProfile,
+        updateUserProfile,
         activeView,
         setActiveView,
         selectedCategory,
@@ -335,6 +372,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         removeCoupon,
         toastMessage,
         showToast,
+        setToastMessage,
         orders,
         addToCart,
         buyNow,

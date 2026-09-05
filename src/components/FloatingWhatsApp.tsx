@@ -1,20 +1,30 @@
 import React, { useState } from 'react';
 import { MessageCircle, X } from 'lucide-react';
+import { motion } from 'motion/react';
 import { useStore } from '../context/StoreContext';
 
 export const FloatingWhatsApp: React.FC = () => {
   const { language } = useStore();
   const [isTooltipOpen, setIsTooltipOpen] = useState(true);
   
-  const whatsappNumber = '919830000000'; // Traditional Kolkata store contact
+  const whatsappNumber = '918981701480'; // Updated Store Contact
   const message = encodeURIComponent(
     'নমস্কার! মহাকাল দশকর্মা ভান্ডার থেকে পূজার ফর্দ ও সামগ্রী সম্পর্কে জানতে চাই।'
   );
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   return (
-    <aside 
+    <motion.aside 
       aria-label="WhatsApp Support"
+      initial={{ opacity: 0, y: 60, scale: 0.8 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ 
+        type: "spring", 
+        stiffness: 300, 
+        damping: 18, 
+        bounce: 0.4, 
+        delay: 0.3 
+      }}
       className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-40 flex flex-col items-end gap-2 group"
     >
       {/* Floating Prompt Bubble from User Reference */}
@@ -55,6 +65,6 @@ export const FloatingWhatsApp: React.FC = () => {
           {language === 'bn' ? 'হোয়াটসঅ্যাপে অর্ডার করুন' : 'Chat on WhatsApp'}
         </span>
       </a>
-    </aside>
+    </motion.aside>
   );
 };
