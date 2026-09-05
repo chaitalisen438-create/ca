@@ -47,11 +47,11 @@ export const HeroSection: React.FC = () => {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#FFF7E2] font-bengali-serif leading-[1.25] tracking-tight">
               {language === 'bn' ? (
                 <>
-                  “আপনার পূজার <span className="text-[#FFDF79] underline decoration-[#C5A059]/50 decoration-wavy">সকল সামগ্রী</span>, এখন এক জায়গায়”
+                  “আপনার পূজার <span className="text-[#ffd700] underline decoration-[#C5A059]/50 decoration-wavy">সকল সামগ্রী</span>, এখন এক জায়গায়”
                 </>
               ) : (
                 <>
-                  “All Your Sacred <span className="text-[#FFDF79]">Puja Samagri</span>, Now in One Place”
+                  “All Your Sacred <span className="text-[#ffd700]">Puja Samagri</span>, Now in One Place”
                 </>
               )}
             </h1>
